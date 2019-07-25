@@ -1,0 +1,58 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "DefScript",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"name": "comment.line.number-sign.defscript",
+			"match": "\\#([\\s\\#].*)$"
+		},
+		{
+			"name": "keyword.operator.defscript",
+			"match": "(?:[\\-=]>|\\|\\.|[\\!\\<\\>\\=\\+\\-\\*\\/]\\=?|~\\*?|@@?)"
+		},
+		{
+			"name": "constant.language.defscript",
+			"match": "\\b(true|false|null|undefined|this)\\b"
+		},
+		{
+			"name": "constant.numeric.defscript",
+			"match": "\\b(?:0[b|o|x|B|O|X])?[0-9]+\\b"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.defscript",
+					"match": "\\b(def|if|else|while|for|[io]n|return|do|try|catch|break|continue|await|yield|import|export|from|as|class|extends|static)\\b"
+				},
+				{
+					"name": "keyword.operator.logical.defscript",
+					"match": "\\b(?:not|and|or)\\b"
+				},
+				{
+					"name": "keyword.operator.new.defscript",
+					"match": "\\b(?:new)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.defscript",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.defscript",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.defscript"
+}

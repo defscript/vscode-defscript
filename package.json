@@ -1,0 +1,25 @@
+{
+    "name": "vscode-defscript",
+    "displayName": "vscode-defscript",
+    "description": "Add defscript support to VS Code",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.36.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "defscript",
+            "aliases": ["DefScript", "defscript"],
+            "extensions": ["dfs"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "defscript",
+            "scopeName": "source.defscript",
+            "path": "./syntaxes/defscript.tmLanguage.json"
+        }]
+    }
+}
