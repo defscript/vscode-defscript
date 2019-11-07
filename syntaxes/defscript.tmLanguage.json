@@ -30,10 +30,10 @@
 			"patterns": [
 				{
 					"name": "keyword.control.defscript",
-					"match": "\\b(def|if|else|while|for|[io]n|return|do|try|catch|break|continue|await|yield|import|export|from|as|class|extends|static)\\b"
+					"match": "\\b(def|if|else|while|for|[io]n|return|do|try|catch|break|continue|throw|await|yield|import|export|from|as|class|extends|static|default)\\b"
 				},
 				{
-					"name": "keyword.operator.logical.defscript",
+					"name": "keyword.control.defscript",
 					"match": "\\b(?:not|and|or)\\b"
 				},
 				{
@@ -43,9 +43,9 @@
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.defscript",
-			"begin": "\"",
-			"end": "\"",
+			"name": "string.quoted.single.defscript",
+			"begin": "'",
+			"end": "'",
 			"patterns": [
 				{
 					"name": "constant.character.escape.defscript",

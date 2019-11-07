@@ -2,4 +2,6 @@
 def hello() {
     for i in hello() do
         await start(i)
+        if a and b
+            throw new Error('hello')
 }
